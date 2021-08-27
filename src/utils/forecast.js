@@ -19,10 +19,9 @@ const forecast = (latitude, longitude, callback) => {
         else
         {
             callback(undefined, {
-                location: body.location.name,
+                location: body.location,
                 weather_description: body.current.weather_descriptions[0],
-                temperature: body.current.temperature,
-                uv_index: body.current.uv_index
+                current_weather: body.current
             })
         }
     });
